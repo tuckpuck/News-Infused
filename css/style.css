@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar-header {
+    text-align: center;
+    width: 100%;
+    /*padding: auto;*/
+}
+
+.navbar-brand {
+  float:none;
+  display: inline-block;
+  padding-left: 51px;
+  margin: 10px 0px;
+
+  font-size: 2.6em;
+
+}
+
+.caret {
+    display: inline-block;
+   margin-top: 15px;
+}
