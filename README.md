@@ -12,5 +12,17 @@ I will be using the technologies of HTML, CSS, JavaScript, AJAX, and Bootstrap.
 
 ## MVP goal
 
-My MVP goal is a single-page application that 
+My MVP goal is a single-page application that displays the latest stories from four World News organizations.
 
+## Strech goals
+
+My stretch goals, thusfar, are:
+1. Adding more categories, such as Science, Tech, and Sports.
+2. Adding a button for a random story.
+3. The ability to filter news sources by language. 
+
+## Wireframe
+https://www.dropbox.com/s/dkobpru9fryz881/news%20site%20basic%20wireframe.jpg?dl=0
+
+## Project Planning
+https://trello.com/b/8O84stDU/news-aggregator-q1
