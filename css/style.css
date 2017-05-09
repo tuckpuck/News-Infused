@@ -1,6 +1,6 @@
-  * {
+* {
   box-sizing: border-box;
-  transition: all .5s ease;
+  transition: all .8s ease;
 }
 
 html {
@@ -94,14 +94,13 @@ a.dropdown-toggle {
   font-size: 1.4rem;
   font-weight: 200;
   max-width: 75rem;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 25px auto;
+  padding: 25px;
   text-align: center;
   color: black;
   background-color: rgba(240, 248, 255, .9);
   z-index: 1;
   border-radius: 5px;
-  padding: 25px;
   -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
@@ -126,7 +125,7 @@ a.dropdown-toggle {
 }
 
 .circle {
-  border-radius: 150px;
+  border-radius: 100%;
   width: 101px;
   height: 101px;
 }
@@ -153,7 +152,7 @@ figure {
   left: 0;
   right: 0;
   border: 1px solid black;
-  background: rgba(59, 43, 51, 0.4);
+  background: rgba(69, 62, 65, 0.4);
   border-radius: 150px;
 }
 
@@ -208,9 +207,10 @@ figure {
 }
 
 .thumbnail {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   background: url('../img/scratchpaper.png');
   background-color: #f7f7f7;
+  border: 1px solid #aaa !important;
 }
 
 .thumbnail:hover {
@@ -297,7 +297,7 @@ i {
   }
   .stage {
     margin-top: 0px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
   }
   .stagelinkword {
     display: block;
@@ -310,7 +310,7 @@ i {
     bottom: 54px;
   }
   .backgroundimage {
-    height: 93vh;
+    height: 105vh;
   }
   @media (max-width: 991px) {
     .articleImage {
