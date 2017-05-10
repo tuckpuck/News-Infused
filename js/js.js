@@ -1,3 +1,5 @@
+var allStories = [];
+
 ////WORLD NEWS
 // BBC
 var bbcxhr = $.getJSON("https://g-newsapi.herokuapp.com/v1/articles?source=bbc-news");
@@ -12,6 +14,7 @@ bbcxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -43,6 +46,7 @@ associatedpressxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -74,6 +78,7 @@ reutersxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -105,6 +110,7 @@ washingtonpostxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -136,6 +142,7 @@ hackernewsxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -166,6 +173,7 @@ thenextwebxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -196,6 +204,7 @@ techcrunchxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -226,6 +235,7 @@ engadgetxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -258,6 +268,7 @@ foxsportsxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -288,6 +299,7 @@ nflnewsxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -318,6 +330,7 @@ bbcsportsxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -348,6 +361,7 @@ espnsportsxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -380,6 +394,7 @@ nationalgeographicxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -410,6 +425,7 @@ newscientistxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
+    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -427,3 +443,5 @@ newscientistxhr.done(function(data) {
     }
   }
 });
+
+console.log(allStories);
