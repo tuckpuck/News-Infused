@@ -1,5 +1,6 @@
 var allStories = [];
-var allTitles = [];
+var tickerObjects = [];
+var shuffledTickerObjects = [];
 var tickerFeed = "";
 
 ////WORLD NEWS
@@ -431,8 +432,7 @@ newscientistxhr.done(function(data) {
   populateNews(newsArray);
 
   buildTickerFeed();
-  console.log(tickerFeed);
-
+  tickerGo();
 
   function populateNews(newsArray) {
     for (article of newsArray) {
@@ -443,24 +443,43 @@ newscientistxhr.done(function(data) {
       $el.find(".articleImage").attr("src", article.imageURL);
       $el.find(".linkthumb").attr('href', article.url);
       $el.find(".articleDescription").text(article.description);
-
       $('#NewscientistContent').append($el);
     }
   }
 });
 
-
 function buildTickerFeed() {
   for (let i = 0; i < allStories.length; i++) {
-    allTitles.push(allStories[i].title);
-    tickerFeed = allTitles.join("    |     ");
-    $(".tickerText").text(tickerFeed);
+    tickerObject = {};
+    tickerObject.title = allStories[i].title;
+    tickerObject.url = allStories[i].url;
+    // tickerObjects.push(tickerObject);
+    // var shuffledTickerObjects = shuffle(tickerObjects);
+    // console.log(shuffledTickerObjects[i]);
+    // console.log(shuffledTickerObjects[i].title);
+    let $tickerItem = $('<li>' + '<a class="tickerLink" href="' + tickerObject.url + '">' + '<p class="tickerText">' + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + tickerObject.title + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + '</p>' + '</a>' + '</li>');
+    $(".ticker").append($tickerItem);
   }
-  return tickerFeed;
+  // return tickerObjects;
 }
 
-$(document).ready(function() {
-  var block_arr = $('.ticker li p').map(function() {
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+return array;
+}
+
+function tickerGo() {
+  var block_arr = $('.ticker li a p').map(function() {
     return $(this).get(0);
   }).toArray();
 
@@ -479,8 +498,8 @@ $(document).ready(function() {
       text_x = ticker_width;
     }
   }
-  setInterval(scroll_ticker, 10);
-});
+  setInterval(scroll_ticker, 5);
+};
 
 $(".hiddenticker").hide();
 $("#iFeatures").hide();
