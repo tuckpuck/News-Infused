@@ -1,4 +1,6 @@
 var allStories = [];
+var allTitles = [];
+var tickerFeed = "";
 
 ////WORLD NEWS
 // BBC
@@ -268,7 +270,6 @@ foxsportsxhr.done(function(data) {
       source: data.source
     }
     newsArray.push(newsObject);
-    allStories.push(newsObject);
   }
   populateNews(newsArray);
 
@@ -429,6 +430,10 @@ newscientistxhr.done(function(data) {
   }
   populateNews(newsArray);
 
+  buildTickerFeed();
+  console.log(tickerFeed);
+
+
   function populateNews(newsArray) {
     for (article of newsArray) {
       let $el = $('<a href="#" class="linkthumb">' + '<div class="col-sm-6 col-md-12 newsCard">' + '<div class="thumbnail">' + '<div class="caption">' + '<img src="" class="articleImage"></img>' +
@@ -444,4 +449,47 @@ newscientistxhr.done(function(data) {
   }
 });
 
-console.log(allStories);
+
+function buildTickerFeed() {
+  for (let i = 0; i < allStories.length; i++) {
+    allTitles.push(allStories[i].title);
+    tickerFeed = allTitles.join("    |     ");
+    $(".tickerText").text(tickerFeed);
+  }
+  return tickerFeed;
+}
+
+$(document).ready(function() {
+  var block_arr = $('.ticker li p').map(function() {
+    return $(this).get(0);
+  }).toArray();
+
+  var ticker_item = $(block_arr[0]);
+  $(".ticker").html(ticker_item);
+  var ticker_width = $(".ticker").width();
+  var text_x = ticker_width;
+
+  scroll_ticker = function() {
+    text_x--;
+    ticker_item.css("left", text_x);
+    if (text_x < -1 * ticker_item.width()) {
+      ticker_item = $(block_arr[(block_arr.indexOf(ticker_item.get(0)) + 1 == block_arr.length) ? 0 : block_arr.indexOf(ticker_item.get(0)) + 1]);
+      ticker_item.css("left", text_x);
+      $(".ticker").html(ticker_item);
+      text_x = ticker_width;
+    }
+  }
+  setInterval(scroll_ticker, 10);
+});
+
+$(".hiddenticker").hide();
+$("#iFeatures").hide();
+$(".tickerbutton").click(function() {
+  if ($(".hiddenticker").is(":hidden")) {
+    $(".hiddenticker").slideDown("slow");
+    $("#iFeatures").slideDown("slow");
+  } else {
+    $(".hiddenticker").slideUp("slow");
+    $("#iFeatures").slideUp("slow");
+  }
+});

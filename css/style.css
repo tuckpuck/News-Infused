@@ -1,4 +1,4 @@
-* {
+  * {
   box-sizing: border-box;
   transition: all .8s ease;
 }
@@ -33,7 +33,9 @@ hr {
   margin-right: 65px;
 }
 
+
 /* Navigation */
+
 .navbar {
   margin-bottom: 0px;
   border-radius: 0px !important;
@@ -44,12 +46,66 @@ hr {
   width: 100%;
 }
 
+.tickerbutton {
+  float: left;
+  display: inline-block;
+  margin: 5px 0px;
+  background-color: grey;
+}
+
+.tickerbutton:hover {
+  background-color: #aaa;
+  border-color: none;
+}
+
+.hiddenticker {
+  height: 40px;
+  background-color: black;
+  border-bottom: 1px solid black;
+  width: 100%;
+  transition: none;
+}
+
+#iFeatures {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  left: 0;
+  transition: none !important;
+    overflow: hidden;
+
+}
+.ticker {
+  transition: none !important;
+  position: absolute;
+  width: auto;
+  top: 20%;
+  left: 10px;
+  /*right: 10px;*/
+  bottom: 20%;
+  overflow: hidden;
+}
+
+.ticker p {
+  transition: none !important;
+  position: relative;
+  top: 0;
+  white-space: nowrap;
+  width: auto;
+  color: white;
+}
+
+.ticker a {
+  transition: none !important;
+  color: white;
+}
+
 .navbar-brand {
   float: none;
   display: inline-block;
   padding: 0px !important;
   height: 0px !important;
-  padding-left: 50px !important;
+  /*padding-left: 50px !important;*/
   margin: 5px 0px;
   font-size: 2.6em;
   font-family: 'Droid Serif', serif;
@@ -81,7 +137,9 @@ a.dropdown-toggle {
   color: white;
 }
 
+
 /*Front Page*/
+
 .backgroundimage {
   background: url('../img/newspapers.jpg');
   background-size: cover;
@@ -184,7 +242,9 @@ figure {
   transform: scale(1.2);
 }
 
+
 /* News Pages*/
+
 .newscontent {
   background: url('../img/paperfibers2x.png');
 }
