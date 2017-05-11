@@ -22,7 +22,9 @@ My stretch goals, thusfar, are:
 3. The ability to filter news sources by language. 
 
 ## Wireframe
-https://www.dropbox.com/s/z1kx7ihm89ql614/newspage.jpg?dl=0
+Homepage:
+https://www.dropbox.com/s/451qpy1s553dcjy/homepage.jpg?dl=0
+News Page:
 https://www.dropbox.com/s/z1kx7ihm89ql614/newspage.jpg?dl=0
 
 ## Project Planning
