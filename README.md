@@ -24,6 +24,7 @@ My stretch goals, thusfar, are:
 ## Wireframe
 Homepage:
 https://www.dropbox.com/s/451qpy1s553dcjy/homepage.jpg?dl=0
+
 News Page:
 https://www.dropbox.com/s/z1kx7ihm89ql614/newspage.jpg?dl=0
 
