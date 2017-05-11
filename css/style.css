@@ -23,7 +23,7 @@ p {
 
 a {
   text-decoration: none !important;
-  /*transition: all 0s ease;*/
+  transition: all 0s ease;
 }
 
 hr {
@@ -68,6 +68,7 @@ li {
   border-bottom: 1px solid black;
   width: 100%;
   transition: none;
+  position: sticky;
 }
 
 #iFeatures {
@@ -107,7 +108,6 @@ li {
   display: inline-block;
   padding: 0px !important;
   height: 0px !important;
-  /*padding-left: 50px !important;*/
   margin: 5px 0px;
   font-size: 2.6em;
   font-family: 'Droid Serif', serif;
@@ -154,7 +154,7 @@ a.dropdown-toggle {
   font-size: 1.4rem;
   font-weight: 200;
   max-width: 75rem;
-  margin: 25px auto;
+  margin: 70px auto;
   padding: 25px;
   text-align: center;
   color: black;
@@ -218,6 +218,7 @@ figure {
 
 .tint:hover {
   box-shadow: rgba(0, 0, 0, .5) 3px 5px 5px;
+  z-index: 10;
 }
 
 .tint:hover:before {
@@ -338,6 +339,7 @@ i {
 
 .poweredBy {
   margin-top: 20px;
+  font-size: 1.1em;
 }
 
 @media (max-width: 768px) {
