@@ -23,7 +23,7 @@ p {
 
 a {
   text-decoration: none !important;
-  transition: all 0s ease;
+  /*transition: all 0s ease;*/
 }
 
 hr {
@@ -53,7 +53,7 @@ li {
 .tickerbutton {
   float: left;
   display: inline-block;
-  margin: 5px 0px;
+  margin: 7px 0px;
   background-color: grey;
 }
 
@@ -89,20 +89,17 @@ li {
   overflow: hidden;
 }
 
-.ticker p {
+.ticker a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  color: white;
   transition: none !important;
   position: relative;
   top: 0;
   white-space: nowrap;
-  margin-left: 180px;
+  padding-left: 340px;
   width: auto;
   color: white;
-}
-
-.ticker a {
-  transition: none !important;
-  color: white;
-  display: block;
 }
 
 .navbar-brand {
