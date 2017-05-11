@@ -22,7 +22,8 @@ My stretch goals, thusfar, are:
 3. The ability to filter news sources by language. 
 
 ## Wireframe
-https://www.dropbox.com/s/dkobpru9fryz881/news%20site%20basic%20wireframe.jpg?dl=0
+https://www.dropbox.com/s/z1kx7ihm89ql614/newspage.jpg?dl=0
+https://www.dropbox.com/s/z1kx7ihm89ql614/newspage.jpg?dl=0
 
 ## Project Planning
 https://trello.com/b/8O84stDU/news-aggregator-q1
