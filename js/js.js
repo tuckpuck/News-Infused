@@ -479,7 +479,7 @@ function tickerGo() {
       text_x = ticker_width;
     }
   }
-  setInterval(scroll_ticker, 3);
+  setInterval(scroll_ticker, 5);
 };
 
 $(".hiddenticker").hide();
