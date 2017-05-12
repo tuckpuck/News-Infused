@@ -147,14 +147,16 @@ a.dropdown-toggle {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  height: 87vh;
+  height: 90vh;
+  /*87 pres*/
 }
 
 .stage {
   font-size: 1.4rem;
   font-weight: 200;
   max-width: 75rem;
-  margin: 65px auto;
+  margin: 170px auto;
+  /*65 pres*/
   padding: 25px;
   text-align: center;
   color: black;
