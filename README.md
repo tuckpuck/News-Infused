@@ -1,6 +1,8 @@
+Check out the working site: http://news-infused.surge.sh/
+
 # Q1-Project
 
-This news aggregator takes the latest stories from various world news sites and shows the latest stories of one leading news provider side-by-side the latest stories of another provider. For instance, the latest AP, Reuters, BBC, and Washington Post articles all displayed on one page. The site will pull data from the https://newsapi.org/ and display it in Bootstrap cards so it is readable and concise.
+This project is a news aggregator that takes the latest stories from various news sites and shows them side-by-side for easy comparison. The site pulls data from the https://newsapi.org/ and displays it dynamically using cards to be readable and concise.
 
 ## Problem to Solve
 
@@ -8,7 +10,7 @@ This technology aims to help with the problem of selective perception in media b
 
 ## Technology
 
-I will be using the technologies of HTML, CSS, JavaScript, AJAX, and Bootstrap. 
+The technologies used on this project are HTML, CSS, JavaScript, AJAX, and Bootstrap. 
 
 ## MVP goal
 
