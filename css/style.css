@@ -1,6 +1,5 @@
-  * {
+* {
   box-sizing: border-box;
-  transition: all .8s ease;
 }
 
 html {
@@ -156,7 +155,7 @@ a.dropdown-toggle {
   font-weight: 200;
   max-width: 75rem;
   margin: 80px auto 120px;
-  padding: 25px 0px;
+  padding: 25px 20px;
   text-align: center;
   color: black;
   background-color: rgba(240, 248, 255, .9);
